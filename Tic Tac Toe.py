@@ -41,39 +41,48 @@ line4.fill=Color("Black")
 line4.draw(win)
 
 ###Defining Areas
-
+box=[]
 centerArea = Areas()
+box.append(centerArea)
 centerArea.fill=Color("Purple")
 
 centerRightArea = Areas()
+box.append(centerRightArea)
 centerRightArea.resizeArea(600,570,900,290)
 centerRightArea.fill=Color("Purple")
 
 centerLeftArea = Areas()
+box.append(centerLeftArea)
 centerLeftArea.resizeArea(0,570,280,290)
 centerLeftArea.fill=Color("Purple")
 
 centerUpArea = Areas()
+box.append(centerUpArea)
 centerUpArea.resizeArea(300,270,580,0)
 centerUpArea.area.fill=Color("Green")
 
 centerUpperRightArea = Areas()
+box.append(centerUpperRightArea)
 centerUpperRightArea.resizeArea(600,270,900,0)
 centerUpperRightArea.area.fill=Color("Green")
 
 centerUpperLeftArea = Areas()
+box.append(centerUpperLeftArea)
 centerUpperLeftArea.resizeArea(280,270,0,0)
 centerUpperLeftArea.area.fill=Color("Green")
 
 centerLowerArea = Areas()
+box.append(centerUpperLeftArea)
 centerLowerArea.resizeArea(600,590,900,900)
 centerLowerArea.area.fill=Color("Red")
 
 centerLowerRightArea = Areas()
+box.append(centerLowerRightArea)
 centerLowerRightArea.resizeArea(300,590,580,900)
 centerLowerRightArea.area.fill=Color("Red")
 
 centerLowerLeftArea = Areas()
+box.append(centerLowerLeftArea)
 centerLowerLeftArea.resizeArea(0,590,280,900)
 centerLowerLeftArea.area.fill=Color("Red")
 
@@ -84,7 +93,7 @@ objectO = Picture("O.jpg")
 ### Selection
 
 def handleMouseDown(obj, event): 
-        for Tic in Areas:
+        for Tic in Box:
             print("Check")
             if Tic.area.hit(event.x,event.y):
                 print("Hit")
